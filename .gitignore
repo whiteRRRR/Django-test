@@ -1,0 +1,11 @@
+# created by virtualenv automatically
+.idea
+Lib/
+venv/
+Scripts/
+.idea/
+DjangoLearn/.env
+pyvenv.cfg
+db.sqlite3
+
+
