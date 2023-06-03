@@ -7,8 +7,9 @@ Scripts/
 DjangoLearn/.env
 pyvenv.cfg
 db.sqlite3
-/migrations/
-__pycache__/
-DjangoLearn/__pycache__
-Django-test/DjangoLearn/__pycache__
+**/migrations/
+**/__pycache__/
+DjangoLearn/__pycache__/settings.cpython-311.pyc
+DjangoLearn/__pycache__/urls.cpython-311.pyc
+
 
