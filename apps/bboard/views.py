@@ -9,7 +9,7 @@ def index(request):
     bbs = Board.objects.all()
     rubrics = Rubric.objects.all()
     contex = {'bbs': bbs, 'rubrics': rubrics}
-    return render(request, 'bboard/index.html', contex)
+    return render(request, 'bboard/templates/bboard/index.html', contex)
 
 
 def by_rubric(request, rubric_id):
@@ -18,11 +18,11 @@ def by_rubric(request, rubric_id):
     current_rubric = Rubric.objects.get(pk=rubric_id)
     context = {'bbs': bbs, 'rubrics': rubrics,
                'current_rubric': current_rubric}
-    return render(request, 'bboard/by_rubric.html', context)
+    return render(request, 'bboard/templates/bboard/by_rubric.html', context)
 
 
 class BbCreateView(CreateView):
-    template_name = 'bboard/create.html'
+    template_name = 'bboard/templates/bboard/create.html'
     form_class = BoardForm
     success_url = reverse_lazy('index')  # /bboard/ дурной тон не использвать
 

@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     #Приложение Bboаrd (список обьявлений)
-    path('bboard/', include('bboard.urls'))
+    path('bboard/', include('apps.bboard.urls'))
 ]
