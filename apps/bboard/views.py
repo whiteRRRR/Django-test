@@ -29,8 +29,23 @@ class ByRubricView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         rubric_id = self.kwargs['rubric_id']
-        context['rubrics'] = Rubric.objects.all()
         context['current_rubric'] = Rubric.objects.get(pk=rubric_id)
+        return context
+
+
+class ByTypesBoard(ListView):
+    model = Board
+    template_name = 'bboard/types_board.html'
+    context_object_name = 'bbs'
+
+    def get_queryset(self):
+        type_char = self.kwargs['type_char']
+        return Board.objects.filter(types=type_char)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        type_char = self.kwargs['type_char']
+        context['current_type'] = type_char
         return context
 
 
