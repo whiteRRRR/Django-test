@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block titile %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'bboard/../../static/bboard/style.css' %}">
+    <link rel="stylesheet" href="{% static 'bboard/style.css' %}">
 </head>
 <body>
     <header><h1>{% block header %}{% endblock %}</h1></header>
@@ -12,6 +12,16 @@
     <nav>
         <a href="{% url 'index' %}">Главная</a>
         <a href="{% url 'add' %}">Добавить</a>
+        <div class="dropdown">
+        <div class="dropdown-toggle">Категория</div>
+            <div class="sub-menu">
+                <a href="#">Категория 1</a>
+                <a href="#">Категория 2</a>
+                <a href="#">Категория 3</a>
+            </div>
+        </div>
+
+        <h3>Категории</h3>
         {% for rubric in rubrics %}
             <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
         {% endfor %}
@@ -21,5 +31,7 @@
         {% block content%}
         {% endblock %}
     </section>
+
+
 </body>
 </html>

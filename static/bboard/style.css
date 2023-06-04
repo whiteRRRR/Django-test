@@ -1,0 +1,55 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: inline-block;
+  padding: 8px;
+  background-color: #f2f2f2;
+  color: #333;
+  cursor: pointer;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+.dropdown:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu a {
+  display: block;
+  padding: 8px;
+  color: #333;
+  text-decoration: none;
+}
+
+.sub-menu a:hover {
+  background-color: #ccc;
+}
+
+
+header h1{
+    font-size: 40pt;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+nav {
+    font-size: 16pt;
+    width: 150px;
+    float: left;
+}
+
+nav a {
+    display: block;
+    margin: 10px;
+}
