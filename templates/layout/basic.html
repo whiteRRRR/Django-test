@@ -13,13 +13,21 @@
         <a href="{% url 'index' %}">Главная</a>
         <a href="{% url 'add' %}">Добавить</a>
         <div class="dropdown">
-        <div class="dropdown-toggle">Категория</div>
+        <div class="dropdown-toggle">Категории</div>
             <div class="sub-menu">
                 {% for rubric in rubrics %}
                     <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
                 {% endfor %}
             </div>
         </div>
+        <p>Тип обьявление</p>
+        <div>
+          <a href="{% url 'type_board' 'B' %}">Покупка</a>
+          <a href="{% url 'type_board' 'S' %}">Продажа</a>
+        </div>
+
+
+
     </nav>
 
     <section>
