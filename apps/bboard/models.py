@@ -11,7 +11,7 @@ class Board(models.Model):
     content = models.TextField(null=True, blank=True, verbose_name='Описание')
     price = models.FloatField(null=True, blank=True, verbose_name='Цена')
     published = models.DateTimeField(auto_now_add=True, db_index=True, verbose_name='Опубликовано')
-    type = models.CharField(max_length=1, choices=Types.choices, default=Types.SELL, verbose_name='Тип обьявление')
+    types = models.CharField(max_length=1, choices=Types.choices, default=Types.SELL, verbose_name='Тип обьявление')
     rubric = models.ForeignKey('Rubric', null=True, on_delete=models.PROTECT, verbose_name='Рубрика')
 
     class Meta:
