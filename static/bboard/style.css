@@ -1,3 +1,19 @@
+nav{
+    font-size: 16px;
+    width: 150px;
+    float: left;
+}
+
+nav a{
+    display: block;
+    margin: 10px;
+}
+
+section{
+    margin-left: 170px;
+}
+
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -36,20 +52,8 @@
   background-color: #ccc;
 }
 
-
 header h1{
     font-size: 40pt;
     text-transform: uppercase;
     text-align: center;
-}
-
-nav {
-    font-size: 16pt;
-    width: 150px;
-    float: left;
-}
-
-nav a {
-    display: block;
-    margin: 10px;
 }

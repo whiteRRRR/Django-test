@@ -15,16 +15,11 @@
         <div class="dropdown">
         <div class="dropdown-toggle">Категория</div>
             <div class="sub-menu">
-                <a href="#">Категория 1</a>
-                <a href="#">Категория 2</a>
-                <a href="#">Категория 3</a>
+                {% for rubric in rubrics %}
+                    <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
+                {% endfor %}
             </div>
         </div>
-
-        <h3>Категории</h3>
-        {% for rubric in rubrics %}
-            <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
-        {% endfor %}
     </nav>
 
     <section>
