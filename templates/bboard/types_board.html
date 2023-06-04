@@ -1,0 +1,23 @@
+{% extends 'layout/basic.html' %}
+{% block header %}
+    {% if current_type == 'S' %}
+        Доска объявлений по продаже
+    {% else %}
+        Доска объявлений по покупке
+    {% endif %}
+{% endblock %}
+
+
+
+{% block content %}
+    {% for bb in bbs %}
+    <div class="bordered-div">
+        <h2>{{ bb.title }}</h2>
+        <p>{{ bb.content }}</p>
+        <p><a href="{% url 'by_rubric' bb.rubric.pk %}">{{ bb.rubric.name }}</a></p>
+        <p>{{ bb.published|date:'d.m.Y' }}</p>
+    </div>
+    {% endfor %}
+
+
+{% endblock %}
