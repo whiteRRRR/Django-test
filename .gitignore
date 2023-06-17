@@ -4,7 +4,7 @@ Lib/
 venv/
 Scripts/
 .idea/
-DjangoLearn/.env
+.env
 pyvenv.cfg
 db.sqlite3
 **/migrations/
